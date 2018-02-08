@@ -1,0 +1,30 @@
+{
+  "name": "nowpass-desktop",
+  "version": "0.1.0",
+  "description": "NOWPASS desktop application",
+  "productName": "NOWPASS Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=static/img/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . nowpass --overwrite --asar=true --platform=win32 --arch=ia32 --icon=static/img/icon.ico --prune=true --out=release-builds --version-string.CompanyName=NOWPASS --version-string.FileDescription=NOWPASS --version-string.ProductName=\"NOWPASS Password Manager\"",
+    "package-linux": "electron-packager . nowpass --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/icon-128.png --prune=true --out=release-builds"
+  },
+  "repository": "https://github.com/nowpass/desktop",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "nowpass-vue": "~0.1.0"
+  },
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^11.0.0"
+  }
+}
